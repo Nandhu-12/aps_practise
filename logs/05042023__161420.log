@@ -1,0 +1,9 @@
+[ 2023-05-04 16:14:20,676 ] 19 root - INFO - Reading from aps database and sensor1 collection
+[ 2023-05-04 16:14:27,952 ] 21 root - INFO - foundIndex(['_id', 'class', 'aa_000', 'ab_000', 'ac_000', 'ad_000', 'ae_000',
+       'af_000', 'ag_000', 'ag_001',
+       ...
+       'ee_002', 'ee_003', 'ee_004', 'ee_005', 'ee_006', 'ee_007', 'ee_008',
+       'ee_009', 'ef_000', 'eg_000'],
+      dtype='object', length=172) columns
+[ 2023-05-04 16:14:27,959 ] 23 root - INFO - Dropping _id column
+[ 2023-05-04 16:14:28,164 ] 25 root - INFO - (36188, 171) are rown and columns in the dataframe df
