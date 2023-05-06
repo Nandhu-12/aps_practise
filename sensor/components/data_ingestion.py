@@ -9,7 +9,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 
 class DataIngestion:
-    
+    # here data_ingestion_config is the object of config_entity.DataIngestionConfig
     def __init__(self,data_ingestion_config:config_entity.DataIngestionConfig ):
         try:
             self.data_ingestion_config = data_ingestion_config
@@ -19,7 +19,7 @@ class DataIngestion:
     def initiate_data_ingestion(self)->artifact_entity.DataIngestionArtifact:
         try:
             logging.info(f"Exporting collection data as pandas dataframe")
-            #Exporting collection data as pandas dataframe
+            #Importing collection data as pandas dataframe
             df:pd.DataFrame  = utils.get_collection_as_dataframe(
                 db_name=self.data_ingestion_config.db_name, 
                 col_name=self.data_ingestion_config.col_name)

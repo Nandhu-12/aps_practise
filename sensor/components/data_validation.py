@@ -92,11 +92,11 @@ class DataValidation:
                         "same_distribution": True
                     }
                 else:
+                    #different distribution
                     drift_report[base_column]={
                         "pvalues":float(same_distribution.pvalue),
                         "same_distribution":False
                     }
-                    #different distribution
 
             self.validation_error[report_key_name]=drift_report
         except Exception as e:
@@ -122,6 +122,7 @@ class DataValidation:
             logging.info(f"Drop null values colums from test df")
             test_df = self.drop_missing_values_columns(df=test_df,report_key_name="missing_values_within_test_dataset")
             
+            # converting the dtype for easy comparison of hypothesis testing
             exclude_columns = [TARGET_COLUMN]
             base_df = utils.convert_columns_float(df=base_df, exclude_columns=exclude_columns)
             train_df = utils.convert_columns_float(df=train_df, exclude_columns=exclude_columns)
